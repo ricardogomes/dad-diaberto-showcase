@@ -21,3 +21,7 @@ For future reference this mini app was build using:
 - [Tailwind CSS - Rapidly build modern websites without ever leaving your HTML.](https://tailwindcss.com/)
 - [Shadcn for Vue - shadcn/vue](https://www.shadcn-vue.com/)
 
+
+## Showcase 2023/24
+
+![Dia Aberto 2023/24 Showcase](./dia-aberto-showcase.gif)
