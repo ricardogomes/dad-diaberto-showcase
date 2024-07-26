@@ -1,6 +1,6 @@
 # Dia Aberto Showcase
 
-![ESTG Logo](public\estg_h-01.png)
+![ESTG Logo](./public/estg_h-01.png)
 
 This is a simple Vue app that is used to showcase some student projects from **Distributed Application Development**,one of the courses I teach at the [**School of Technology and Management, Polytechnic University of Leiria**](https://www.ipleiria.pt/estg/), in the [Open Day of the school](https://www.ipleiria.pt/estg/event/dia-aberto-2024-16-e-18-de-marco-inscricoes-abertas-ate-dia-4-de-marco/#:~:text=Dia%20Aberto%202024%20%7C16%20e,Superior%20de%20Tecnologia%20e%20Gest%C3%A3o&text=Nos%20dias%2016%20e%2018,que%20ocorrem%20na%20nossa%20Escola).
 
