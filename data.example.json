@@ -1,0 +1,22 @@
+{
+ "year":"2023/24",
+ "architecture":"architecture.png",
+ "projects": [
+        {
+            "id": "project1",
+            "title": "Projeto 1",
+            "image":"DAD_202324_Project1.png",
+            "link":"http://diaaberto-202324-dad-project1-172.22.21.152.sslip.io",
+            "students": [
+                {"name":"...", "number": "..."},
+                {"name":"...", "number": "..."},
+                {"name":"...", "number": "..."},
+                {"name":"...", "number": "..."}
+            ],
+            "credentials":  {
+                "user": "...",
+                "password": "..."
+            }
+        }
+    ]
+}
