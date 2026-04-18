@@ -4,8 +4,9 @@ import { RouterView } from 'vue-router'
 import { useColorMode } from '@vueuse/core'
 import { Switch } from '@/components/ui/switch'
 import { Label } from '@/components/ui/label'
+import type dataJson from '../data.json'
 
-const data = inject('data')
+const data = inject<typeof dataJson>('data')!
 
 const mode = useColorMode()
 
@@ -15,7 +16,7 @@ const toggle = () => {
 </script>
 
 <template>
-  <div class="container">
+  <div class="container mx-auto">
     <header class="text-center ">
       <div class="flex flex-row w-[90%] m-auto items-center">
         <div class="basis-3/4">

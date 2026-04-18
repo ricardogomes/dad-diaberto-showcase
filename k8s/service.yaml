@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dad-diaberto-showcase
+spec:
+  selector:
+    app: dad-diaberto-showcase
+  ports:
+    - port: 80
+      targetPort: 80
+  type: ClusterIP

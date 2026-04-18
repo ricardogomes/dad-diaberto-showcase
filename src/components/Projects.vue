@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { inject } from 'vue'
+import type dataJson from '../../data.json'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import {
   Card,
@@ -11,7 +12,7 @@ import {
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 
-const data = inject('data')
+const data = inject<typeof dataJson>('data')!
 
 const navigateToProject = (url: string  )=> {
   window.open(url, '_blank', 'noopener')
@@ -21,26 +22,12 @@ const navigateToProject = (url: string  )=> {
 
 <template>
 <div class="p-10">
-    <Tabs default-value="arquitetura" class="w-full">
+    <Tabs default-value="project1" class="w-full">
     <TabsList class="w-full p-6">
-      <TabsTrigger value="arquitetura">
-        Arquitetura
-      </TabsTrigger>
       <TabsTrigger :value="project.id" v-for='project in data.projects' :key="project.id"  >
         {{ project.title }}
       </TabsTrigger>
     </TabsList>
-    <TabsContent value="arquitetura">
-      <Card>
-        <CardHeader>
-          <CardTitle>Desenvolvimento de Aplicações Distribuídas</CardTitle>
-          <CardDescription>Arquitetura de Projeto</CardDescription>
-        </CardHeader>
-        <CardContent >
-          <img class="w-full" :src="`/imgs/${data.architecture}`" alt="Arquitetura de Projeto" />      
-        </CardContent>
-      </Card>
-    </TabsContent>
     <TabsContent :value="project.id" v-for='project in data.projects' :key="project.id">
       <Card>
         <CardHeader>
@@ -59,9 +46,9 @@ const navigateToProject = (url: string  )=> {
             </div>
             <div class="flex-1">
               <p class="font-bold">Credenciais:</p>
-              <ul>
-                <li>utilizador: {{ project.credentials.user }}</li>
-                <li>palavra-passe: {{ project.credentials.user }}</li>
+              <ul v-for="cred in project.credentials">
+                <li>utilizador: {{ cred.user }}</li>
+                <li>palavra-passe: {{ cred.password }}</li>
               </ul>
             </div>
             <div class="flex-1">
